@@ -6,6 +6,13 @@ import logging
 from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import re
+import nltk
+
+# Download required corpora
+nltk.download('punkt', quiet=True)
+nltk.download('averaged_perceptron_tagger', quiet=True)
+nltk.download('brown', quiet=True)
+nltk.download('wordnet', quiet=True)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
